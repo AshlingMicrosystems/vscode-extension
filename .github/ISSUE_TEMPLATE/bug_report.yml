@@ -1,0 +1,98 @@
+name: Bug report
+description: Something in the RiscFree extension doesn't work as expected.
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug.
+
+        **This issue will be public.** Don't include license keys, customer names, confidential source code or private file paths. If you need to share anything confidential, email support@ashling.com instead.
+  - type: input
+    id: extension-version
+    attributes:
+      label: Extension version
+      description: In the Extensions view, select RiscFree. The version is shown next to the name.
+      placeholder: "26.4.0"
+    validations:
+      required: true
+  - type: input
+    id: vscode-version
+    attributes:
+      label: VS Code version
+      description: From Help → About.
+      placeholder: "1.105.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows x64
+        - Linux x64
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: os-details
+    attributes:
+      label: OS version
+      placeholder: "Windows 11 23H2, Ubuntu 24.04"
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - SDK Manager
+        - Example projects / import
+        - Build (CMake or Make)
+        - Debug configuration editor
+        - Hardware debugging (probe)
+        - QEMU simulator debugging
+        - Probe drivers / udev
+        - Licensing
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: sdk
+    attributes:
+      label: SDK and version
+      description: The SDK selected for the project, as shown under SDK Selection.
+      placeholder: "risc-v-sdk 26.4.1"
+  - type: input
+    id: target
+    attributes:
+      label: Probe and target device
+      description: For debugging issues. Leave blank if not relevant.
+      placeholder: "Opella-XD, SiFive HiFive1 Rev B"
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: What did you expect to happen, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the SDK Manager
+        2. Click Install next to ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: |
+        Copy any relevant output from the Output panel (for example the **Ashling vcpkg**, **RiscFree Setup** or **Ashling Drivers** channels, or the build output) and from the Debug Console. Remove anything confidential first.
+      render: text
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Drag and drop images here if they help explain the problem.

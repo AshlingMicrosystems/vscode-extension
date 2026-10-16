@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://docs.ashling.com/vscode/
+    about: Guides for SDKs, debug configurations, probes and licensing.
+  - name: Technical support and licensing
+    url: mailto:support@ashling.com
+    about: For licensing, probes, or anything you'd rather not post in public.
+  - name: Report a security vulnerability
+    url: https://github.com/AshlingMicrosystems/vscode-extension/blob/main/SECURITY.md
+    about: Don't report vulnerabilities in public issues. Follow the security policy instead.
